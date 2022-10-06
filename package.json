@@ -1,0 +1,17 @@
+{
+  "name": "vitepress",
+  "version": "1.0.0",
+  "description": "用来记录个人学习历程的个人博客",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "keywords": [],
+  "author": "penglei",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "1.0.0-alpha.19"
+  }
+}
