@@ -1,143 +1,38 @@
+const myNav = require('./nav.js')
+const mySidebar = require('./sidebar.js')
+
 module.exports = {
     title: '笨鸟先飞',
     titleTemplate: "临川慕容吹雪的博客",
     description: '临川慕容吹雪自我成长路',
     lastUpdated: true, //开启上次更新时间
-    
+    lang: 'zh-CN',
     head:[
       ["link", { rel: "icon", href: "/stupidBird.png" }],//设置标签页图标
       ["meta", { property: "og:title", content: "临川慕容吹雪博客" }],
       ["meta", { property: "og:site_name", content: "临川慕容吹雪博客" }],
       ["meta", { property: "og:type", content: "website" }],
-      ["meta", { property: "og:description", content: "前端教程" }],
+      ["meta", { property: "og:description", content: "临川慕容吹雪博客" }],
       ["meta", { property: "og:url", content: "https://gitee.com/pengleiUser" }]
     ],
+    markdown: {
+      lineNumbers: true
+    },
     //自定义主题
     themeConfig: {
     siteTitle: "小彭自我成长之路",
     logo: "/stupidBird.png",
-  
-    markdown: {
-      theme: "nord",
+    outline:'deep',
+    outlineTitle: '快速导航',
+    lastUpdatedText: '上次更新时间', //最后更新时间文本
+    docFooter: { //上下篇文本
+      prev: '上一篇',
+      next: '下一篇'
     },
-   
-    nav: [
-      {
-        text: "前端",
-        items: [
-          { text: "HTML", link: "/frontend/HTML/" },
-          { text: "CSS", link: "/frontend/CSS/" },
-          { text: "JavaScript", link: "/frontend/JavaScript/" },
-          { text: "TypeScript", link: "/frontend/TypeScript/" },
-          { text: "前端框架", link: "/frontend/Frame/" },
-        ],
-      },
-      { text: "后端相关", link: "/backEnd/" },
-      { text: "其他学习", link: "/other/" },
-    ],
+   //导航栏
+    nav:myNav,
     //侧边栏
-    sidebar: {
-      "/frontend/HTML": [
-        {
-          text: "HTML",
-          // collapsible: true,
-          items: [
-            { text: "test", link: "/frontend/HTML/" },
-            { text: "test", link: "/frontend/HTML/" },
-          ],
-        },
-        {
-          text: "HTML5",
-          // collapsible: true,
-          items: [
-            {
-              text: "HTML5test",
-              link: "/frontend/HTML/",
-            },
-          ],
-        }
-      ],
-      "/frontend/CSS": [
-        {
-          text: "CSS",
-          // collapsible: true,
-          items: [
-            { text: "test", link: "/frontend/CSS/" },
-            { text: "test", link: "/frontend/CSS/" },
-          ],
-        },
-        {
-          text: "CSS",
-          // collapsible: true,
-          items: [
-            {
-              text: "TypeScript test",
-              link: "/frontend/CSS/",
-            },
-          ],
-        }
-      ],
-      "/frontend/JavaScript": [
-        {
-          text: "JavaScript",
-          // collapsible: true,
-          items: [
-            { text: "test", link: "/frontend/JavaScript/" },
-            { text: "test", link: "/frontend/JavaScript/" },
-          ],
-        },
-        {
-          text: "JavaScript",
-          // collapsible: true,
-          items: [
-            {
-              text: "JavaScript test",
-              link: "/frontend/JavaScript/",
-            },
-          ],
-        }
-      ],
-      "/frontend/TypeScript": [
-        {
-          text: "TypeScript",
-          // collapsible: true,
-          items: [
-            { text: "test", link: "/frontend/TypeScript/" },
-            { text: "test", link: "/frontend/TypeScript/" },
-          ],
-        },
-        {
-          text: "TypeScript",
-          // collapsible: true,
-          items: [
-            {
-              text: "TypeScript test",
-              link: "/frontend/TypeScript/",
-            },
-          ],
-        }
-      ],
-      "/frontend/Frame": [
-        {
-          text: "Frame",
-          // collapsible: true,
-          items: [
-            { text: "test", link: "/frontend/Frame/" },
-            { text: "test", link: "/frontend/Frame/" },
-          ],
-        },
-        {
-          text: "Frame",
-          // collapsible: true,
-          items: [
-            {
-              text: "Frame test",
-              link: "/frontend/Frame/",
-            },
-          ],
-        }
-      ],
-    },
+    sidebar:mySidebar,
     socialLinks: [
       { icon: "github", link: "https://gitee.com/pengleiUser" },
     ],

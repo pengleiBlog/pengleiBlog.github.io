@@ -6,6 +6,12 @@ set -e
 # 构建
 pnpm run docs:build
 
+#将图片文件复制到发布目录中
+#删除已有内容
+rm -rf   docs/.vitepress/dist/images
+#复制新的内容
+cp -af docs/images  docs/.vitepress/dist
+
 # 进入待发布的目录
 cd docs/.vitepress/dist
 
